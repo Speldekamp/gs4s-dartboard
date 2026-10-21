@@ -8,7 +8,7 @@ Authors: Daniël Speldekamp and Ayse Saka-Helmhout.
 
 ## Live version
 
-Served with GitHub Pages from the `main` branch: <https://speldekamp.github.io/gs4s-dartboard/>
+Deployed to GitHub Pages by GitHub Actions (`.github/workflows/pages.yml`) on every push to `main`: <https://speldekamp.github.io/gs4s-dartboard/>
 
 ## Files
 
