@@ -17,13 +17,13 @@ Deployed to GitHub Pages by GitHub Actions (`.github/workflows/pages.yml`) on ev
 | `index.html` | The page (overview text, footer) |
 | `js/dartboard.js` | The tool: data (`DATA`), drawing and behaviour. Plain JavaScript, no libraries; it builds an SVG |
 | `css/dartboard.css` | Styling and layout of the tool |
-| `css/stylesheet.css` | Page styling (dark theme), from the site this was copied from |
+| `css/stylesheet.css` | Page styling (dark theme): the rules this page uses from the PaperMod / hugo-website styles and the site's own overrides |
 | `css/theme.css` | Light theme and the Dark/Light toggle beside the title |
 | `js/theme.js` | Toggle behaviour: follows the system setting until the visitor picks a theme, then remembers it (`localStorage` key `pref-theme`). The figure's colours follow the page theme |
 | `fonts/newsreader/` | Self-hosted Newsreader font |
 | `favicon-dark.svg`, `favicon-light.svg` | Favicon (two rings and a dot), switched with the page theme by `js/theme.js` |
 | `favicon.svg` | The same favicon following the browser's dark/light setting (used without JavaScript) |
-| `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Fallbacks for browsers without SVG favicons (grey, so they show on light and dark tabs) |
+| `favicon.ico`, `apple-touch-icon.png` | Fallbacks for browsers without SVG favicons (the `.ico` is grey, so it shows on light and dark tabs) |
 
 No build step: edit the files and push. To view locally, run `python3 -m http.server` in this folder and open <http://localhost:8000>.
 

@@ -17,7 +17,7 @@
       buttons[i].setAttribute('aria-pressed', buttons[i].getAttribute('data-theme') === t ? 'true' : 'false');
     }
   }
-  /* The favicon follows the page theme: light lines on dark, dark lines on light.
+  /* The favicon follows the page theme: dark lines in the dark theme, light lines in the light theme.
      Without JavaScript, favicon.svg follows the browser's setting instead. */
   var icon = document.getElementById('favicon');
   function setIcon() {
