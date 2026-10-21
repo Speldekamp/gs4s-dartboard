@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+<!-- Favicon: the front-page skyline, simplified (no mast, windows or reflection).
+     Drawn on a 16 px grid with lines on pixel centres, so it stays sharp at 16, 32 and 48 px. -->
+<circle cx="8" cy="8" r="8" fill="#1b1c20"/>
+<g fill="none" stroke="#c9c6bf" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" shape-rendering="crispEdges">
+<path d="M3.5 12.5V9.5H5.5V6.5H7.5V3.5H10.5V7.5H12.5V12.5"/>
+<path d="M2.5 12.5H13.5"/>
+</g>
+</svg>
