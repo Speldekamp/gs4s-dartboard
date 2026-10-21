@@ -12,7 +12,8 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#2e2e33">
+<meta name="theme-color" content="#1b1c20" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f2ec" media="(prefers-color-scheme: light)">
 <meta property="og:title" content="GS4S Dartboard Tool">
 <meta property="og:description" content="The interactive policy dartboard tool developed for the Horizon Europe GS4S project.">
 <meta property="og:type" content="website">
@@ -25,13 +26,22 @@
 @font-face{font-family:newsreader;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/newsreader/newsreader-latin-500-normal.woff2) format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 </style>
 <link rel="stylesheet" href="css/stylesheet.css">
+<link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/dartboard.css">
+<script src="js/theme.js" defer></script>
 </head>
 <body class="dark" id="top">
+<script>(function(){var t;try{t=localStorage.getItem("pref-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";if(t==="light")document.body.classList.remove("dark")})()</script>
 <main class="main">
 <article class="post-single">
 <header class="post-header">
+<div class="title-row">
 <h1 class="post-title entry-hint-parent">GS4S Dartboard Tool</h1>
+<div class="theme-toggle" role="group" aria-label="Colour theme" hidden>
+<button type="button" data-theme="dark">Dark</button>
+<button type="button" data-theme="light">Light</button>
+</div>
+</div>
 <div class="post-meta"><span title="2026-10-01">October 2026</span>&nbsp;&#183;&nbsp;Daniël Speldekamp,&#8201;Ayse Saka-Helmhout</div>
 </header>
 <div class="post-content">

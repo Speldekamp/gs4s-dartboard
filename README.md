@@ -18,6 +18,8 @@ Deployed to GitHub Pages by GitHub Actions (`.github/workflows/pages.yml`) on ev
 | `js/dartboard.js` | The tool: data (`DATA`), drawing and behaviour. Plain JavaScript, no libraries; it builds an SVG |
 | `css/dartboard.css` | Styling and layout of the tool |
 | `css/stylesheet.css` | Page styling (dark theme), from the site this was copied from |
+| `css/theme.css` | Light theme and the Dark/Light toggle beside the title |
+| `js/theme.js` | Toggle behaviour: follows the system setting until the visitor picks a theme, then remembers it (`localStorage` key `pref-theme`). The figure's colours follow the page theme |
 | `fonts/newsreader/` | Self-hosted Newsreader font |
 
 No build step: edit the files and push. To view locally, run `python3 -m http.server` in this folder and open <http://localhost:8000>.

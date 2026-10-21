@@ -49,11 +49,6 @@
     outline: 2px solid var(--mid);
     outline-offset: 2px;
 }
-.dartboard .db-mode {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
 .dartboard .db-intro {
     text-align: center;
     margin: 22px auto 22px;
@@ -99,6 +94,7 @@
 .dartboard .db-hit { cursor: pointer; outline: none; }
 @media (hover: hover) {
     .dartboard .db-hit:hover { fill: rgba(255, 255, 255, 0.07); }
+    body:not(.dark) .dartboard .db-hit:hover { fill: rgba(0, 0, 0, 0.05); }
     .dartboard .db-seg button:hover { color: var(--light); }
 }
 .dartboard .db-hit:focus-visible { stroke: var(--light); stroke-width: 2.5; }
@@ -150,14 +146,6 @@
     .dartboard .db-left { flex-direction: column; gap: 22px; padding-top: 40px; }
     .dartboard .db-body { gap: 32px; }
 }
-@media (max-width: 1040px) {
-    .dartboard .db-top {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .dartboard .db-mode { position: static; }
-}
 @media (max-width: 1000px) {
     .dartboard .db-body {
         grid-template-columns: minmax(0, 1fr) minmax(0, 440px) minmax(0, 1fr);
@@ -166,12 +154,6 @@
     .dartboard .db-panel, .dartboard .db-left { padding-top: 0; }
 }
 @media (max-width: 860px) {
-    .dartboard .db-top {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .dartboard .db-mode { position: static; }
     .dartboard .db-body { grid-template-columns: minmax(0, 1fr); }
     .dartboard .db-fig {
         order: -1;
