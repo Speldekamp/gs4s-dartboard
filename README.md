@@ -21,6 +21,9 @@ Deployed to GitHub Pages by GitHub Actions (`.github/workflows/pages.yml`) on ev
 | `css/theme.css` | Light theme and the Dark/Light toggle beside the title |
 | `js/theme.js` | Toggle behaviour: follows the system setting until the visitor picks a theme, then remembers it (`localStorage` key `pref-theme`). The figure's colours follow the page theme |
 | `fonts/newsreader/` | Self-hosted Newsreader font |
+| `favicon-dark.svg`, `favicon-light.svg` | Favicon (two rings and a dot), switched with the page theme by `js/theme.js` |
+| `favicon.svg` | The same favicon following the browser's dark/light setting (used without JavaScript) |
+| `favicon.ico`, `favicon-*.png`, `apple-touch-icon.png` | Fallbacks for browsers without SVG favicons (grey, so they show on light and dark tabs) |
 
 No build step: edit the files and push. To view locally, run `python3 -m http.server` in this folder and open <http://localhost:8000>.
 

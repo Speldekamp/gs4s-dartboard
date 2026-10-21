@@ -1,7 +1,7 @@
 /* Dark/light toggle beside the page title. The theme is set before first paint
    by the inline script at the top of <body> (saved choice, else the system
    setting); this file wires up the buttons and keeps following the system
-   setting until the visitor picks one. The dartboard figure follows the
+   setting until the visitor picks one, and switches the favicon with the theme. The dartboard figure follows the
    body's "dark" class by itself (js/dartboard.js). */
 (function () {
   'use strict';
@@ -17,9 +17,16 @@
       buttons[i].setAttribute('aria-pressed', buttons[i].getAttribute('data-theme') === t ? 'true' : 'false');
     }
   }
+  /* The favicon follows the page theme: light lines on dark, dark lines on light.
+     Without JavaScript, favicon.svg follows the browser's setting instead. */
+  var icon = document.getElementById('favicon');
+  function setIcon() {
+    if (icon) icon.setAttribute('href', 'favicon-' + current() + '.svg');
+  }
   function apply(t) {
     document.body.classList.toggle('dark', t === 'dark');
     show();
+    setIcon();
   }
   function saved() {
     try { return localStorage.getItem(KEY); } catch (e) { return null; }
@@ -42,4 +49,5 @@
 
   group.hidden = false;
   show();
+  setIcon();
 })();
