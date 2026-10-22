@@ -22,12 +22,11 @@ Deployed to GitHub Pages by GitHub Actions (`.github/workflows/pages.yml`) on ev
 | `js/theme.js` | Toggle behaviour: follows the system setting until the visitor picks a theme, then remembers it (`localStorage` key `pref-theme`). The figure's colours follow the page theme |
 | `fonts/lora/`, `fonts/jetbrains-mono/` | Self-hosted GS4S fonts: Lora (body text, 400 and 600) and JetBrains Mono ExtraBold (titles, headings, buttons, labels) |
 | `img/gs4s-logo.svg` | GS4S logo (from the GS4S Visual Identity Manual), in the header band |
-| `favicon-dark.svg`, `favicon-light.svg` | Favicon (two rings and a dot), switched with the page theme by `js/theme.js` |
-| `favicon.svg` | The same favicon following the browser's dark/light setting (used without JavaScript) |
-| `favicon.ico`, `apple-touch-icon.png` | Fallbacks for browsers without SVG favicons (the `.ico` is grey, so it shows on light and dark tabs) |
+| `favicon.svg` | Favicon: the GS4S butterfly icon on a Jacarta disc (from the GS4S Visual Identity Manual), one version for both themes |
+| `favicon.ico`, `apple-touch-icon.png` | The same icon as 16/32/48 px `.ico` and a 180 px touch icon (on a Jacarta square) |
 
 No build step: edit the files and push. To view locally, run `python3 -m http.server` in this folder and open <http://localhost:8000>.
 
 ## Licences
 
-Code: MIT (see `LICENSE`). The page styling is based on [PaperMod](https://github.com/adityatelange/hugo-PaperMod) and [hugo-website](https://github.com/pmichaillat/hugo-website) (both MIT), and the Lora and JetBrains Mono fonts are under the SIL Open Font License; their licence texts are in `licenses/`. The GS4S logo belongs to the GS4S project and is not covered by the MIT licence.
+Code: MIT (see `LICENSE`). The page styling is based on [PaperMod](https://github.com/adityatelange/hugo-PaperMod) and [hugo-website](https://github.com/pmichaillat/hugo-website) (both MIT), and the Lora and JetBrains Mono fonts are under the SIL Open Font License; their licence texts are in `licenses/`. The GS4S logo and butterfly icon belong to the GS4S project and is not covered by the MIT licence.
