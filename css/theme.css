@@ -61,3 +61,8 @@ body:not(.dark) { color-scheme: light; }
     .theme-toggle button[aria-pressed="false"]:hover { background: rgba(251, 242, 221, .18); }
 }
 .theme-toggle[hidden] { display: none; }
+
+/* Light theme: sector subline and credit lines in the body text colour (Jacarta),
+   like the overview, pathway, takeaway and note text. */
+body:not(.dark) .dartboard .db-sub,
+body:not(.dark) .post-content .credits { color: var(--mid); }
