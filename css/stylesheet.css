@@ -7,51 +7,32 @@
   Copyright (c) 2020 nanxiaobei and adityatelange; Copyright (c) 2021-2025 adityatelange
   Dark theme (Jacarta) here; the light theme (Beige) is in theme.css.
 */
-:root{--gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width: 720px; --header-height: 44px; --footer-height: 70px; --radius: 8px; --theme: rgb(255, 255, 255); --entry: rgb(255, 255, 255); --primary: rgb(30, 30, 30); --secondary: rgb(108, 108, 108); --tertiary: rgb(214, 214, 214); --gray: rgb(165, 165, 165); --content: rgb(30, 30, 30); --code-block-bg: rgb(28, 29, 33); --code-bg: rgb(245, 245, 245); --border: rgb(238, 238, 238); --darkcolor: #6a7ba2; --lightcolor: #cbd1de; --semibold: 500; --homesize: 16px; --textsize: 18px; --h1size: 25px; --entrysize: 15px; --headersize: 16px; --footersize: 13px; --lineheight: 1.45; --lineclamp: 8; --marginleft: 26px;}
-.dark{--theme: rgb(29, 30, 32); --entry: rgb(46, 46, 51); --primary: rgb(218, 218, 219); --secondary: rgb(155, 156, 157); --tertiary: rgb(65, 66, 68); --content: rgb(196, 196, 197); --code-block-bg: rgb(46, 46, 51); --code-bg: rgb(55, 56, 62); --border: rgb(51, 51, 51);}
+:root{--gap: 24px; --content-gap: 20px; --main-width: 720px; --header-height: 44px; --footer-height: 70px; --theme: rgb(255, 255, 255); --textsize: 18px; --marginleft: 26px; --mono: "jetbrains mono", ui-monospace, monospace; --serif: lora, Georgia, serif;}
+/* ---- GS4S house style: dark theme (Jacarta page, Beige text, Coral headings) ---- */
+.dark{--light: #fbf2dd; --mid: #fbf2dd; --muted: #fb9684; --accent: #fa7c65; --link-line: #fa7c65; --theme: #33314d; --entry: #3f3d5a; --border: #5c5a71; --act-bg: #fa7c65; --act-fg: #33314d; --primary: var(--light); --content: var(--mid);}
 *,::after,::before{box-sizing: border-box;}
 html{-webkit-tap-highlight-color: transparent; overflow-y: scroll; text-size-adjust: 100%;}
 a,button,body,h1,h2{color: var(--primary);}
-body{font-family: -apple-system, BlinkMacSystemFont, "segoe ui", Roboto, Oxygen, Ubuntu, Cantarell, "open sans", "helvetica neue", sans-serif; font-size: 18px; line-height: 1.6; word-break: break-word; background: var(--theme);}
-article,footer,header,main{display: block;}
-h1,h2{line-height: 1.2;}
+body{font-family: var(--serif); font-size: 18px; line-height: 1.6; word-break: break-word; background: var(--theme);}
+h2{line-height: 1.2;}
 h1,h2,p{margin-top: 0px; margin-bottom: 0px;}
 ul{padding: 0px;}
 a{text-decoration: none;}
 body,ul{margin: 0px;}
-button{padding: 0px; font: inherit; background: 0px 0px; border: 0px;}
-button{cursor: pointer;}
-.footer{font-size: var(--footersize); color: var(--secondary);}
-.footer{margin: auto; padding: calc((var(--footer-height) - var(--gap))/2)var(--gap); text-align: center; line-height: 20px; background: var(--code-bg);}
-.footer span{margin-inline: 1px;}
-.footer span:last-child{white-space: nowrap;}
-.footer a{color: var(--secondary);}
-.footer a:hover{border-bottom: 2px solid var(--darkcolor);}
-.footer a:hover{color: var(--secondary);}
-.main{position: relative; min-height: calc(100vh - var(--header-height) - var(--footer-height)); max-width: calc(var(--main-width) + var(--gap) * 2); margin: auto; padding: var(--gap);}
-.post-header{margin: 24px auto var(--content-gap);}
-.post-title{margin-bottom: 20px; font-size: 36px;}
-.post-meta{color: var(--secondary); font-size: 15px;}
-.post-content{color: var(--content); line-height: var(--lineheight); font-size: var(--textsize);}
-.post-content h2{margin: 32px auto 24px; font-size: 24px;}
-.post-content a{box-shadow: 0 2px 0 var(--darkcolor); color: currentcolor;}
+button{padding: 0px; font: inherit; background: 0px 0px; border: 0px; cursor: pointer;}
+.main{position: relative; min-height: calc(100vh - var(--header-height) - var(--footer-height)); max-width: calc(var(--main-width) + var(--gap) * 2); margin: auto; padding: 8px var(--gap) var(--gap);}
+.post-content{color: var(--content); line-height: 1.6; font-size: var(--textsize);}
 .post-content p,.post-content ul{margin-bottom: var(--content-gap);}
 .post-content ul{padding-inline-start: 20px; margin-left: var(--marginleft);}
 .post-content li{margin-top: 5px;}
-.post-content li::marker{color: var(--tertiary);}
-@media screen and (max-width: 768px){:root{--gap: 14px;}.footer{padding: calc((var(--footer-height) - var(--gap) - 10px)/2)var(--gap);}}
-/* ---- GS4S house style: dark theme (Jacarta page, Beige text, Coral headings) ---- */
-.dark{--light: #fbf2dd; --mid: #fbf2dd; --muted: #fb9684; --accent: #fa7c65; --link-line: #fa7c65; --theme: #33314d; --entry: #3f3d5a; --tertiary: #5c5a71; --border: #5c5a71; --code-block-bg: #3f3d5a; --code-bg: #3f3d5a; --act-bg: #fa7c65; --act-fg: #33314d; --primary: var(--light); --content: var(--mid); --secondary: var(--muted); --gray: var(--muted); --darkcolor: var(--muted); --lightcolor: var(--border);}
-:root{--mono: "jetbrains mono", ui-monospace, monospace; --serif: lora, Georgia, serif;}
-body,h1,h2,.post-title{font-family: var(--serif);}
+.post-content li::marker{color: var(--accent);}
+@media screen and (max-width: 768px){:root{--gap: 14px;}}
 /* Titles, section headings, metadata, buttons and footer: JetBrains Mono ExtraBold, upper case */
 .post-title,.post-content h2,.post-meta,.footer,.theme-toggle button{font-family: var(--mono); font-weight: 800; text-transform: uppercase;}
 .post-content h2{color: var(--accent); font-size: 20px; letter-spacing: .04em; margin: 48px auto 20px;}
 .post-content h2 .sec-no{display: block; font-size: 13px; letter-spacing: 0; margin-bottom: 4px;}
-.post-content li::marker{color: var(--accent);}
-.post-content a{color: var(--light); box-shadow: none; text-decoration: underline; text-decoration-color: var(--link-line); text-decoration-thickness: 2px; text-underline-offset: 4px;}
+.post-content a{color: var(--light); text-decoration: underline; text-decoration-color: var(--link-line); text-decoration-thickness: 2px; text-underline-offset: 4px;}
 .post-content a:hover{color: var(--accent);}
-.post-content{line-height: 1.6;}
 /* Header band: pink gradient with beige and coral "clouds", logo, toggle, title (same in both themes) */
 .band{position: relative; overflow: hidden; background: linear-gradient(100deg, #e2366f 0%, #d42f66 55%, #c52a5e 100%); padding: 0 var(--gap);}
 .band-art span{position: absolute; border-radius: 999px;}
@@ -66,10 +47,12 @@ body,h1,h2,.post-title{font-family: var(--serif);}
 .band-logo img{display: block; height: 88px; width: auto;}
 .band .post-title{margin: 72px 0 16px; font-size: clamp(30px, 7vw, 44px); line-height: 1.15; letter-spacing: .01em; color: #fbf2dd;}
 .band .post-meta{font-size: 13px; letter-spacing: .06em; line-height: 1.5; color: #fbf2dd;}
-.main{padding-top: 8px;}
 @media (max-width: 700px){.band-art{opacity: .55;}.band .post-title{margin-top: 48px;}.band-logo img{height: 72px;}}
-.footer{background: var(--theme); border-top: 1px solid var(--border); max-width: 640px; margin-top: 40px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 10px; font-size: 12px; letter-spacing: .04em; line-height: 1.5;}
+/* Footer */
+.footer{margin: 40px auto 0; padding: calc((var(--footer-height) - var(--gap))/2) var(--gap); text-align: center; background: var(--theme); border-top: 1px solid var(--border); max-width: 640px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 10px; font-size: 12px; letter-spacing: .04em; line-height: 1.5;}
+.footer span{margin-inline: 1px;}
 .footer .foot-part{white-space: nowrap;}
 .footer a{color: var(--muted); text-decoration: underline; text-underline-offset: 3px;}
-.footer a:hover{border-bottom: none; color: var(--light);}
+.footer a:hover{color: var(--light);}
+@media screen and (max-width: 768px){.footer{padding: calc((var(--footer-height) - var(--gap) - 10px)/2) var(--gap);}}
 @media (max-width: 560px){.footer{flex-direction: column; align-items: center;}.footer .foot-sep{display: none;}}

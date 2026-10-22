@@ -10,18 +10,11 @@ body:not(.dark) {
     --link-line: #cf4871;
     --theme: #fdf9ee;
     --entry: #f5efe1;
-    --tertiary: #858394;
     --border: #858394;
-    --code-block-bg: #f5efe1;
-    --code-bg: #f5efe1;
     --act-bg: #33314d;
     --act-fg: #fdf9ee;
     --primary: var(--light);
     --content: var(--mid);
-    --secondary: var(--muted);
-    --gray: var(--muted);
-    --darkcolor: var(--muted);
-    --lightcolor: var(--border);
 }
 html { background: var(--theme); }
 body.dark { color-scheme: dark; }

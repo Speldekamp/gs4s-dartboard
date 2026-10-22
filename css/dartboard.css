@@ -8,7 +8,6 @@
     font-family: var(--serif);
 }
 .dartboard .db-top {
-    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -143,7 +142,6 @@
     font-size: 16px;
     line-height: 1.6;
     color: var(--mid);
-    max-width: 720px;
 }
 /* "Click a wedge to read about it." on its own line */
 .dartboard .db-note strong {
@@ -154,24 +152,11 @@
     text-transform: uppercase;
     color: var(--accent);
 }
-.dartboard .db-source {
-    font: 800 16px/1.5 var(--mono);
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
 /* Less room: takeaway goes under the pathway text */
 @media (max-width: 1320px) {
     .dartboard .db-panel,
     .dartboard .db-left { flex-direction: column; gap: 22px; padding-top: 40px; }
     .dartboard .db-body { gap: 32px; }
-}
-@media (max-width: 1000px) {
-    .dartboard .db-body {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 440px) minmax(0, 1fr);
-        gap: 24px;
-    }
-    .dartboard .db-panel, .dartboard .db-left { padding-top: 0; }
 }
 /* One column below 1100px: the figure with its note line, then the pathway text.
    Pathway and takeaway side by side, up to 720px wide; stacked below 640px. */
