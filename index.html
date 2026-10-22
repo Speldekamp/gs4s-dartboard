@@ -10,8 +10,8 @@
 <link rel="icon" href="favicon.ico" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="favicon.svg" id="favicon">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#1b1c20" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f4f2ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#33314d" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fdf9ee" media="(prefers-color-scheme: light)">
 <meta property="og:title" content="GS4S Dartboard Tool">
 <meta property="og:description" content="The interactive policy dartboard tool developed for the Horizon Europe GS4S project.">
 <meta property="og:type" content="website">
@@ -23,13 +23,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://speldekamp.github.io/gs4s-dartboard/share.png">
 <link rel="canonical" href="https://speldekamp.github.io/gs4s-dartboard/">
-<link rel="preload" href="fonts/newsreader/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/newsreader/newsreader-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/lora/lora-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/jetbrains-mono/jetbrains-mono-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-@font-face{font-family:newsreader;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/newsreader/newsreader-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:newsreader;font-style:normal;font-weight:400;font-display:swap;src:url(fonts/newsreader/newsreader-latin-400-normal.woff2) format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:newsreader;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/newsreader/newsreader-latin-ext-500-normal.woff2) format("woff2");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:newsreader;font-style:normal;font-weight:500;font-display:swap;src:url(fonts/newsreader/newsreader-latin-500-normal.woff2) format("woff2");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"lora";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/lora/lora-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"lora";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/lora/lora-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"lora";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/lora/lora-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"lora";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/lora/lora-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"jetbrains mono";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/jetbrains-mono/jetbrains-mono-latin-ext-800-normal.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"jetbrains mono";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/jetbrains-mono/jetbrains-mono-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 </style>
 <link rel="stylesheet" href="css/stylesheet.css">
 <link rel="stylesheet" href="css/theme.css">
@@ -38,29 +40,33 @@
 </head>
 <body class="dark" id="top">
 <script>(function(){var t;try{t=localStorage.getItem("pref-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";if(t==="light")document.body.classList.remove("dark")})()</script>
-<main class="main">
-<article class="post-single">
-<header class="post-header">
-<div class="title-row">
-<h1 class="post-title">GS4S Dartboard Tool</h1>
+<header class="band">
+<div class="band-art" aria-hidden="true"><span class="c1"></span><span class="c2"></span><span class="c3"></span><span class="c4"></span><span class="c5"></span></div>
+<div class="band-inner">
+<div class="band-top">
+<a class="band-logo" href="https://gs4s.eu/" target="_blank"><img src="img/gs4s-logo.svg" width="355" height="314" alt="GS4S – Global strategy for skills migration and development"></a>
 <div class="theme-toggle" role="group" aria-label="Colour theme" hidden>
 <button type="button" data-theme="dark">Dark</button>
 <button type="button" data-theme="light">Light</button>
 </div>
 </div>
+<h1 class="post-title">GS4S Dartboard Tool</h1>
 <div class="post-meta"><span title="2026-10-01">October 2026</span>&nbsp;&#183;&nbsp;Daniël Speldekamp,&#8201;Ayse Saka-Helmhout</div>
+</div>
 </header>
+<main class="main">
+<article class="post-single">
 <div class="post-content">
-<h2 id="overview">Overview</h2>
+<h2 id="overview"><span class="sec-no" aria-hidden="true">01</span>Overview</h2>
 <p>This is the interactive policy dartboard tool developed by Daniël Speldekamp and Ayse Saka-Helmhout for the Horizon Europe GS4S project - Global Strategy for Skills, Migration and Development. It is deliverable 4.3 in task 4.3, and titled &ldquo;On Target: Sector Pathways to Close Skill Shortages&rdquo;. More information on the project is available from the project website (<a href="https://gs4s.eu/" target="_blank">gs4s.eu</a>) and CORDIS (<a href="https://cordis.europa.eu/project/id/101132377" target="_blank">https://cordis.europa.eu/project/id/101132377</a>).</p>
 <p>This figure works with the data also presented in policy brief no. 4, &ldquo;Closing Europe&rsquo;s Skills Gap: Sector-Specific Lessons for EU Skills Policy&rdquo;. The authors of this brief are Ayse Saka-Helmhout, Daniël Speldekamp, Albert Rutten, Mariana Alvarado, Sandra Lavenex, and Arjan Heyma. The full policy brief is available on Zenodo via <a href="https://doi.org/10.5281/zenodo.20676417" target="_blank">https://doi.org/10.5281/zenodo.20676417</a>.</p>
 <p>The figure below showcases consistent ways in which multinational enterprises in Germany, Estonia, Switzerland and the Netherlands successfully address skill shortages.</p>
 <p>Please note that JavaScript must be enabled to see the dartboard tool.</p>
-<h2 id="download">Download</h2>
+<h2 id="download"><span class="sec-no" aria-hidden="true">02</span>Download</h2>
 <ul>
 <li>Forthcoming.</li>
 </ul>
-<h2 id="dartboard-tool">Dartboard Tool</h2>
+<h2 id="dartboard-tool"><span class="sec-no" aria-hidden="true">03</span>Dartboard Tool</h2>
 <div class="dartboard"></div>
 <script src="js/dartboard.js" defer></script>
 </div>

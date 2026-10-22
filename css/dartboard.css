@@ -1,10 +1,3 @@
-/* Extra Newsreader styles used only here: 600 (ring labels) and italic
-   (source line). Same Fontsource files as the 400/500 in index.html. */
-@font-face{font-family:'Newsreader';font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/newsreader/newsreader-latin-ext-600-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Newsreader';font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/newsreader/newsreader-latin-600-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;src:url("../fonts/newsreader/newsreader-latin-ext-400-italic.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
-@font-face{font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;src:url("../fonts/newsreader/newsreader-latin-400-italic.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-
 /* GS4S Dartboard Tool: styling of the figure and its side panels (js/dartboard.js).
    Breaks out of the 720px text column to up to 1560px:
    [takeaway][pathway] [figure] [pathway][takeaway]. */
@@ -12,6 +5,7 @@
     width: min(1560px, calc(100vw - 48px));
     margin: 24px 0 0 calc(50% - min(780px, calc(50vw - 24px)));
     color: var(--mid);
+    font-family: var(--serif);
 }
 .dartboard .db-top {
     position: relative;
@@ -22,27 +16,26 @@
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 4px;
-    padding: 4px;
+    gap: 2px;
+    padding: 3px;
     border: 1px solid var(--border);
     border-radius: 999px;
 }
 .dartboard .db-seg button {
-    font: inherit;
-    font-size: 24px;
-    line-height: 1.2;
-    color: var(--muted);
+    font: 800 15px/1.2 var(--mono);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--mid);
     background: transparent;
     border: 0;
     border-radius: 999px;
-    padding: 9px 20px;
+    padding: 0 22px;
     min-height: 44px;
     cursor: pointer;
 }
 .dartboard .db-seg button[aria-pressed="true"] {
-    background: var(--entry);
-    color: var(--light);
-    box-shadow: inset 0 0 0 1px var(--tertiary);
+    background: var(--act-bg);
+    color: var(--act-fg);
 }
 .dartboard .db-seg button:focus-visible {
     outline: 2px solid var(--mid);
@@ -55,12 +48,12 @@
 }
 .dartboard .db-head {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.25;
     color: var(--light);
 }
 .dartboard .db-sub {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5;
     color: var(--muted);
     margin-top: 4px;
@@ -90,57 +83,83 @@
     height: auto;
     font-family: inherit;
 }
+/* Centre disc: sector name and "N pathways" in JetBrains Mono, upper case */
+.dartboard .db-hub-name,
+.dartboard .db-hub-sub {
+    font-family: var(--mono);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.dartboard .db-hub-name { letter-spacing: .04em; }
+.dartboard .db-hub-sub { letter-spacing: .08em; }
 .dartboard .db-hit { cursor: pointer; outline: none; }
 @media (hover: hover) {
     .dartboard .db-hit:hover { fill: rgba(255, 255, 255, 0.07); }
     body:not(.dark) .dartboard .db-hit:hover { fill: rgba(0, 0, 0, 0.05); }
-    .dartboard .db-seg button:hover { color: var(--light); }
+    .dartboard .db-seg button[aria-pressed="false"]:hover { background: var(--entry); }
 }
 .dartboard .db-hit:focus-visible { stroke: var(--light); stroke-width: 2.5; }
 .dartboard .db-title {
-    font-size: 24px;
-    font-weight: 500;
-    color: var(--light);
-    line-height: 1.25;
+    font: 800 18px/1.3 var(--mono);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--accent);
 }
 .dartboard .db-firms {
-    font-size: 16px;
-    line-height: 1.5;       /* same line box and gap under the heading as the Takeaway text, */
+    font: 800 12px/24px var(--mono);  /* same line box as the Takeaway text, */
+    letter-spacing: .08em;
+    text-transform: uppercase;
     color: var(--muted);
-    margin: 6px 0 18px;     /* so "N firms" and the takeaway's first line share a baseline */
+    margin: 4px 0 18px;                /* so "N firms" and the takeaway's first line share a baseline */
 }
 .dartboard .db-group + .db-group { margin-top: 14px; }
 .dartboard .db-label {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 16px;
-    color: var(--mid);
-    margin-bottom: 3px;
+    gap: 10px;
+    font: 800 12px/1.5 var(--mono);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--light);
+    margin-bottom: 4px;
 }
 .dartboard .db-swatch { flex: none; }
 .dartboard .db-items {
     font-size: 16px;
     line-height: 1.5;
-    color: var(--muted);
+    color: var(--mid);
 }
-.dartboard .db-take .db-title { margin-bottom: 6px; }
+.dartboard .db-take .db-title { margin-bottom: 4px; }
+.dartboard .db-take .db-items { line-height: 24px; }
 .dartboard .db-foot {
-    margin-top: 28px;
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-align: center;
 }
-.dartboard .db-note,
-.dartboard .db-source {
-    font-size: 17px;
-    color: var(--muted);
+.dartboard .db-note {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--mid);
     max-width: 720px;
 }
-.dartboard .db-source { font-style: italic; }
-.dartboard .db-note strong { font-weight: 600; } /* "Click a wedge to read about it." */
+/* "Click a wedge to read about it." on its own line */
+.dartboard .db-note strong {
+    display: block;
+    margin-top: 8px;
+    font: 800 13px/1.5 var(--mono);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+.dartboard .db-source {
+    font: 800 11px/1.5 var(--mono);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
 /* Less room: takeaway goes under the pathway text */
 @media (max-width: 1320px) {
     .dartboard .db-panel,

@@ -1,17 +1,21 @@
-/* Light theme and the dark/light toggle beside the page title.
-   The dark theme lives in stylesheet.css (.dark). The light theme mirrors it:
-   warm paper background, the same three text roles (light = titles,
-   mid = body, muted = metadata), now dark on light. */
+/* Light theme and the Dark/Light toggle in the header band.
+   The dark theme lives in stylesheet.css (.dark): Jacarta page, Beige text.
+   The light theme mirrors it with the GS4S light beige page and Jacarta text;
+   headings in dark Ruber (Coral is too pale to read on beige). */
 body:not(.dark) {
-    --light: #1b1c20;
-    --mid: #3a3c42;
-    --muted: #676a71;
-    --theme: #f4f2ec;
-    --entry: #ebe8e1;
-    --tertiary: #d3cfc6;
-    --border: #dedad2;
-    --code-block-bg: #ebe8e1;
-    --code-bg: #e6e3dc;
+    --light: #33314d;
+    --mid: #33314d;
+    --muted: #5c5a71;
+    --accent: #a63a5a;
+    --link-line: #cf4871;
+    --theme: #fdf9ee;
+    --entry: #f5efe1;
+    --tertiary: #858394;
+    --border: #858394;
+    --code-block-bg: #f5efe1;
+    --code-bg: #f5efe1;
+    --act-bg: #33314d;
+    --act-fg: #fdf9ee;
     --primary: var(--light);
     --content: var(--mid);
     --secondary: var(--muted);
@@ -23,47 +27,37 @@ html { background: var(--theme); }
 body.dark { color-scheme: dark; }
 body:not(.dark) { color-scheme: light; }
 
-/* Title row: heading on the left, toggle on the right edge of the text column.
-   The toggle's outline is exactly as tall as the heading's line (36px x 1.2). */
-.title-row {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 16px;
-    margin-bottom: 20px;
-}
-.title-row .post-title { margin-bottom: 0; }
+/* Dark/Light toggle, right of the logo in the pink band. Same colours in both
+   themes: beige outline, the chosen theme filled beige with Jacarta text. */
 .theme-toggle {
     flex: none;
-    box-sizing: border-box;
-    height: 43.2px;
     display: inline-flex;
     gap: 2px;
     padding: 3px;
-    border: 1px solid var(--border);
+    border: 1px solid #fbf2dd;
     border-radius: 999px;
 }
 .theme-toggle button {
-    font: inherit;
-    font-size: 18px;
-    line-height: 1;
-    color: var(--muted);
+    font: 800 13px/1 "jetbrains mono", ui-monospace, monospace;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #fbf2dd;
     background: transparent;
     border: 0;
     border-radius: 999px;
-    padding: 0 14px;
+    min-height: 36px;
+    padding: 0 16px;
     cursor: pointer;
 }
 .theme-toggle button[aria-pressed="true"] {
-    background: var(--entry);
-    color: var(--light);
-    box-shadow: inset 0 0 0 1px var(--tertiary);
+    background: #fbf2dd;
+    color: #33314d;
 }
 .theme-toggle button:focus-visible {
-    outline: 2px solid var(--mid);
+    outline: 2px solid #fbf2dd;
     outline-offset: 2px;
 }
 @media (hover: hover) {
-    .theme-toggle button:hover { color: var(--light); }
+    .theme-toggle button[aria-pressed="false"]:hover { background: rgba(251, 242, 221, .18); }
 }
 .theme-toggle[hidden] { display: none; }

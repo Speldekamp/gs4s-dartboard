@@ -82,14 +82,14 @@
   var PALETTES = {
     dark: {
       E: ['#4d7a33', '#f0ede6', 2.6], H: ['#2c3a27', '#9cc27f', 2], A: ['#b8352c', '#f0ede6', 2.6], U: ['#43302a', '#e3936a', 2], N: ['#2a2c31', null, 0],
-      gap: '#1b1c20', outline: '#3a3d44', lblSet: '#36302b', lblAct: '#27292e', lblLine: '#1b1c20', lblBold: '#f0ede6', lblText: '#c9c6bf',
+      gap: '#33314d', outline: '#3a3d44', lblSet: '#36302b', lblAct: '#27292e', lblLine: '#33314d', lblBold: '#f0ede6', lblText: '#c9c6bf',
       hub: '#24262b', hubLine: '#3a3d44', hubText: '#f0ede6', hubSub: '#a3a6ad', sel: '#f0ede6', dim: 0.32, swLine: '#3a3d44'
     },
     /* Light page theme: the source figures' colours (navy hub, salmon labels),
-       with gaps in the page colour (#f4f2ec) and the page's lines and text. */
+       with gaps in the page colour (#fdf9ee) and the page's lines and text. */
     light: {
       E: ['#43761f', '#ffffff', 2.6], H: ['#dcebd3', '#2f5e14', 2], A: ['#e0261b', '#ffffff', 2.6], U: ['#f6c9ab', '#c9581c', 2], N: ['#e6e3dc', null, 0],
-      gap: '#f4f2ec', outline: '#c4c0b7', lblSet: '#fde6cf', lblAct: '#fcf4ec', lblLine: '#e8c9b5', lblBold: '#34304e', lblText: '#34304e',
+      gap: '#fdf9ee', outline: '#c4c0b7', lblSet: '#fde6cf', lblAct: '#fcf4ec', lblLine: '#e8c9b5', lblBold: '#34304e', lblText: '#34304e',
       hub: '#34304e', hubLine: '#34304e', hubText: '#ffffff', hubSub: '#f2a58a', sel: '#1b1c20', dim: 0.4, hDim: 0.9, swLine: '#b9b5ad'
     }
   };
@@ -260,8 +260,8 @@
 
       /* Centre: sector and number of pathways */
       el('circle', { cx: CX, cy: CX, r: R[0] - 3, fill: P.hub, stroke: P.hubLine, 'stroke-width': 1 }, gHub);
-      el('text', { x: CX, y: CX - 3, 'text-anchor': 'middle', 'font-size': 24, 'font-weight': 500, fill: P.hubText }, gHub).textContent = D.name;
-      el('text', { x: CX, y: CX + 23, 'text-anchor': 'middle', 'font-size': 15, fill: P.hubSub }, gHub).textContent = D.paths.length + ' pathways';
+      el('text', { x: CX, y: CX - 3, 'text-anchor': 'middle', 'font-size': 22, 'class': 'db-hub-name', fill: P.hubText }, gHub).textContent = D.name;
+      el('text', { x: CX, y: CX + 23, 'text-anchor': 'middle', 'font-size': 10.5, 'class': 'db-hub-sub', fill: P.hubSub }, gHub).textContent = D.paths.length + ' pathways';
 
       fig.replaceChildren(svg);
       select(state.sel);
