@@ -260,7 +260,7 @@
 
       /* Centre: sector and number of pathways */
       el('circle', { cx: CX, cy: CX, r: R[0] - 3, fill: P.hub, stroke: P.hubLine, 'stroke-width': 1 }, gHub);
-      el('text', { x: CX, y: CX - 3, 'text-anchor': 'middle', 'font-size': 22, 'class': 'db-hub-name', fill: P.hubText }, gHub).textContent = D.name;
+      el('text', { x: CX, y: CX - 3, 'text-anchor': 'middle', 'font-size': 19, 'class': 'db-hub-name', fill: P.hubText }, gHub).textContent = D.name;
       el('text', { x: CX, y: CX + 23, 'text-anchor': 'middle', 'font-size': 10.5, 'class': 'db-hub-sub', fill: P.hubSub }, gHub).textContent = D.paths.length + ' pathways';
 
       fig.replaceChildren(svg);
