@@ -106,7 +106,7 @@
     color: var(--accent);
 }
 .dartboard .db-firms {
-    font: 800 12px/24px var(--mono);  /* same line box as the Takeaway text, */
+    font: 800 16px/24px var(--mono);  /* same line box as the Takeaway text, */
     letter-spacing: .08em;
     text-transform: uppercase;
     color: var(--muted);
@@ -117,7 +117,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font: 800 12px/1.5 var(--mono);
+    font: 800 16px/1.5 var(--mono);
     letter-spacing: .08em;
     text-transform: uppercase;
     color: var(--light);
@@ -149,13 +149,13 @@
 .dartboard .db-note strong {
     display: block;
     margin-top: 8px;
-    font: 800 13px/1.5 var(--mono);
+    font: 800 16px/1.5 var(--mono);
     letter-spacing: .08em;
     text-transform: uppercase;
     color: var(--accent);
 }
 .dartboard .db-source {
-    font: 800 11px/1.5 var(--mono);
+    font: 800 16px/1.5 var(--mono);
     letter-spacing: .08em;
     text-transform: uppercase;
     color: var(--muted);
